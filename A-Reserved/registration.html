@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/regis_style.css">
+    <!-- Link for tailwind css -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="icons/AVA2.png" type="image/png">
+    <title>Financial Chat Suppport</title>
+    <script src="js/lottie.min.js"></script>
+</head>
+
+<body>
+
+    <div class="content-wrapper">
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+                <form id="registerForm">
+                    <h1 class="oxford-blue">Create Account</h1><br>
+                    <!-- <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div> -->
+                    <!-- <span>or use your email for registeration</span> -->
+                    <input type="text" id="name" class="name-active" placeholder="Name" required>
+                    <input type="email" id="email" class="email-active" placeholder="Email" required>
+                    <input type="password" id="password" class="password-active" placeholder="Password" required>
+                    <input type="password" id="confirmPassword" class="password-active" placeholder="Confirm Password" required>
+                    <label id="regis-error-message" for="error" class="display-error"></label>
+                    <button type="submit">Sign Up</button>
+                </form>
+               
+            </div>
+            <div class="form-container sign-in">
+                <form id="loginForm">
+                    <h1 class="oxford-blue">Sign In</h1><br>
+                    <!-- <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div> -->
+                    <!-- <span>or use your email password</span> -->
+                    <input type="email" id="loginEmail" class="login-active" placeholder="Email" required>
+                    <input type="password" id="loginPassword" class="login-active" placeholder="Password" required>
+                    <label for="error" id="login-error-message" class="display-error"></label> <!-- Display Errors -->
+                    <a id="password-reset" href="#">Forget Your Password?</a>
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Welcome!</h1>
+                        <div id="welcome-animation" style="width: 150px; height: 150px;"></div> <!-- Robot Animation -->
+                        <p>Already have an account? Login now</p>
+                        <button class="hidden" id="login">Sign In</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <div id="person-animation" style="width: 150px; height: 150px;"></div> <!-- Person Animation -->
+                        <h1 id="greeting" class="text-3xl font-bold text-gradient text-center mb-6">Hello Friend</h1>
+                        <p>Register with your personal details to use all of site features</p>
+                        <button class="hidden" id="register">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="success-animation" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; height: 300px; z-index: 9999;"></div>
+    <script src="js/regis_script.js"></script>
+
+</body>
+
+</html>

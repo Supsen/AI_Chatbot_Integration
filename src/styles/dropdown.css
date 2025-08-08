@@ -1,0 +1,114 @@
+:root {
+    --oxford-blue: #0d1a30ff;
+    --glaucous: #507dbcff;
+    --powder-blue: #a1c6eaff;
+    --columbia-blue: #bbd1eaff;
+    --platinum: #dae3e5ff;
+    --custom-blue: rgb(72, 105, 149);
+
+    --dark-1: #08131d;
+    --dark-2: #0f1d2c;
+    --dark-3: #343c4a;
+
+    --placeholder: #bbb;
+    --grey1: #444;
+}
+/* Profile Button */
+.profile-btn {
+    background: transparent;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    border-radius: 50px;
+    width: 45px;  /* ✅ Ensure width and height are equal */
+    height: 45px; /* ✅ Maintain circular shape */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ✅ Ensure icon inside the button is centered */
+.profile-btn i {
+    font-size: 15px; /* Adjust icon size */
+}
+
+/* Profile Dropdown */
+.profileDropdown {
+    position: absolute;
+    top: 60px;
+    right: 4%;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    min-width: 180px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Show dropdown when active */
+.profileDropdown.active {
+    display: flex;
+}
+
+.profileDropdown div {
+    padding: 10px 15px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: none;
+    transition: background 0.3s ease;
+}
+
+.profileDropdown div i {
+    font-size: 1rem;
+}
+
+.profileDropdown div:hover {
+    border-radius: 8px;
+    background-color: #444;
+}
+
+.profileDropdown div:last-child {
+    border-bottom: none;
+}
+
+/* Light mode styles for profileDropdown */
+    body.light-mode .profileDropdown {
+        background-color: var(--platinum); 
+        color: var(--oxford-blue); 
+        border: 1px solid var(--glaucous); 
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+
+    body.light-mode .profileDropdown div {
+        border-bottom: none;
+        color: var(--glaucous); 
+    }
+
+    body.light-mode .profileDropdown div:hover {
+        border-radius: 8px;
+        background-color: var(--columbia-blue); 
+        color: var(--glaucous); 
+    }
+
+    body.light-mode .profileDropdown div:last-child {
+        border-bottom: none;
+    }
+
+/* Disable Profile Edit for Guests */
+.disabled {
+    pointer-events: none;  /* Prevent clicks */
+    opacity: 0.5;  /* Make it look inactive */
+    cursor: not-allowed;
+}
+
+/* Enable Click for Logged-in Users */
+.clickable {
+    pointer-events: auto;
+    opacity: 1;
+    cursor: pointer;
+}

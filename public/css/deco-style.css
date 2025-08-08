@@ -1,0 +1,101 @@
+:root {
+    --oxford-blue: #0d1a30ff;
+    --glaucous: #507dbcff;
+    --powder-blue: #a1c6eaff;
+    --columbia-blue: #bbd1eaff;
+    --platinum: #dae3e5ff;
+    --custom-blue: rgb(72, 105, 149);
+
+    --dark-1: #08131d;
+    --dark-2: #0f1d2c;
+    --dark-3: #343c4a;
+}
+
+/* Apply to all scrollbars */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    height: 10px; /* Height of the scrollbar (horizontal) */
+}
+
+/* Track (background) of the scrollbar */
+::-webkit-scrollbar-track {
+    background: transparent; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Handle (thumb) of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background: var(--dark-3); /* Darker gray handle */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Even darker gray on hover */
+}
+
+/* Chat Loading Animation */
+.loading-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.loading-indicator span {
+    width: 6px;
+    height: 6px;
+    background-color: #888;
+    border-radius: 50%;
+    display: inline-block;
+    animation: typing 1.5s infinite ease-in-out;
+}
+
+.loading-indicator span:nth-child(1) {
+    animation-delay: 0s;
+}
+.loading-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.loading-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.3; transform: scale(0.8); }
+}
+
+/* Welcome message typewriter animation */
+    #header {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: monospace;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid black; /* Cursor effect */
+        display: inline-block;
+        
+        width: 22ch; /* Matches the number of characters */
+        
+        animation: typing 2s steps(22, end) forwards, blink 0.7s infinite;
+    }
+
+    /* Typewriting animation */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 22ch; /* Number of characters */
+        }
+    }
+
+    /* Blinking cursor effect */
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }

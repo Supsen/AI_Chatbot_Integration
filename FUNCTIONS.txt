@@ -1,0 +1,22 @@
+getCryptoPrice
+getStockPrice
+calculateLoanPayment
+
+
+
+Function: Personal Loan & Mortgage Calculator
+
+This function will calculate the monthly payment for a loan based on:
+	•	Loan Amount ($)
+	•	Annual Interest Rate (%)
+	•	Loan Term (Years)
+
+Formula Used:
+
+M = \frac{P \times r}{1 - (1 + r)^{-n}}
+
+Where:
+	•	M = Monthly Payment
+	•	P = Loan Amount
+	•	r = Monthly Interest Rate (Annual Rate / 12)
+	•	n = Total Number of Payments (Years × 12)

@@ -1,0 +1,250 @@
+:root {
+  --oxford-blue: #0d1a30ff;
+  --glaucous: #507dbcff;
+  --powder-blue: #a1c6eaff;
+  --columbia-blue: #bbd1eaff;
+  --platinum: #dae3e5ff;
+  --custom-blue: rgb(72, 105, 149);
+
+  --dark-1: #08131d;
+  --dark-2: #0f1d2c;
+  --dark-3: #343c4a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: #333;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+  }
+
+  .tabs {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .tab {
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  .tab.active {
+    color: #000;
+  }
+
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+
+  .form-container {
+    display: none;
+  }
+
+  .form-container.active {
+    display: block;
+  }
+
+  .form-header {
+    margin-bottom: 30px;
+  }
+
+  .form-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .form-header p {
+    color: #777;
+    font-size: 14px;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+  }
+
+  .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+  }
+
+  .input-group input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .input-group input:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .checkbox-container input {
+    margin-right: 8px;
+  }
+
+  .checkbox-container label {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .forgot-link {
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+  }
+
+  .forgot-link:hover {
+    text-decoration: underline;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--glaucous);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #333;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    color: #777;
+    font-size: 14px;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #eaeaea;
+  }
+
+  .divider::before {
+    margin-right: 15px;
+  }
+
+  .divider::after {
+    margin-left: 15px;
+  }
+
+  .social-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .social-button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .social-button:hover {
+    background-color: #f8f8f8;
+  }
+
+  .bottom-text {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 25px;
+  }
+
+  .bottom-text a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .bottom-text a:hover {
+    text-decoration: underline;
+  }
+
+  .display-error{
+    color: red;
+    font-size: small;
+    margin-bottom: 3px;
+}
+
+/* Active State for Specific Inputs */
+.name-active.active {
+  border: 2px solid rgba(255, 0, 0, 0.397);
+}
+
+.email-active.active {
+  border: 2px solid rgba(255, 0, 0, 0.397);
+}
+
+.password-active.active {
+  border: 2px solid rgba(255, 0, 0, 0.397);
+}
+
+.login-active.active {
+  border: 2px solid rgba(255, 0, 0, 0.397);
+}

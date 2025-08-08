@@ -1,0 +1,217 @@
+:root {
+    --oxford-blue: #0d1a30ff;
+    --glaucous: #507dbcff;
+    --powder-blue: #a1c6eaff;
+    --columbia-blue: #bbd1eaff;
+    --platinum: #dae3e5ff;
+    --custom-blue: rgb(72, 105, 149);
+
+    --dark-1: #08131d;
+    --dark-2: #0f1d2c;
+    --dark-3: #343c4a;
+
+    --placeholder: #bbb;
+    --grey1: #444;
+}
+/* Popup Overlay */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Popup Content Box */
+.dialog-content {
+    background: var(--grey1);
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    max-width: 550px;
+    max-height: 90vh;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.dialog-content .scrollable-content {
+    overflow-y: auto; /* ✅ Enables scrolling */
+    flex-grow: 1; /* ✅ Fills available space */
+    padding-right: 8px; /* ✅ Adds padding for scrollbar */
+    max-height: 60vh; /* ✅ Prevents content from expanding too much */
+  }
+
+/* Popup Header */
+.dialog-header {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Form Input Fields */
+.dialog-content input,
+.dialog-content textarea {
+    width: 95%;
+    background: var(--grey1);
+    color: var(--placeholder);
+    border: none;
+    padding: 10px;
+    border: 1px solid var(--placeholder);
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.dialog-subtitle {
+    font-size: small;
+}
+
+/* Trait Buttons */
+.trait-button {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background: gray;
+    color: white;
+    border: none;
+}
+
+.trait-button.active {
+    background: var(--dark-2);
+}
+
+/* Buttons */
+.dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.dialog-buttons button {
+    background: gray;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.dialog-buttons button:hover {
+    background: darkgray;
+}
+
+.dialog-buttons .save-btn {
+    background: green;
+}
+
+.dialog-buttons .save-btn:hover {
+    background: var(--dark-3);
+}
+
+.custom-textarea {
+    width: 100%;
+    height: 120px; /* Slightly larger than typical input height */
+    background: var(--grey1);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    resize: none; /* disable manual resizing */
+    font-size: 1rem; /* Slightly bigger font than normal inputs */
+    line-height: 1.4;
+}
+
+.lable-text {
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
+
+/* Select */
+select {
+    width: 100%; /* ✅ Makes it take full width */
+    padding: 10px; /* ✅ Adds padding inside */
+    border: 1px solid #ccc; /* ✅ Light border */
+    border-radius: 5px; /* ✅ Rounded corners */
+    background-color: white; /* ✅ Background */
+    font-size: 16px; /* ✅ Adjust font size */
+    color: #333; /* ✅ Text color */
+    cursor: pointer;
+    outline: none; /* ✅ Removes blue outline */
+    appearance: none; /* ✅ Removes default browser styles */
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* 🔹 Style when select is focused */
+  select:focus {
+    border-color: #007bff; /* ✅ Change border color when clicked */
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* ✅ Add glow effect */
+  }
+  
+  /* 🔹 Style dropdown arrow */
+  select::-ms-expand {
+    display: none; /* ✅ Removes default arrow in IE */
+  }
+  
+  /* 🔹 Custom dropdown icon */
+  .select-wrapper {
+    position: relative;
+  }
+  
+  .select-wrapper select {
+    appearance: none; /* ✅ Removes default arrow */
+    padding-right: 30px; /* ✅ Space for custom icon */
+  }
+  
+  .select-wrapper::after {
+    content: "▼"; /* ✅ Custom dropdown arrow */
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    pointer-events: none; /* ✅ Prevents click interference */
+  }
+/* End Select */
+
+.error-message {
+    color: red;
+    font-size: 15px;
+    padding: 10px;
+}
+
+/* Dropdown style */
+.custom-dropdown {
+    width:100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light gray background */
+    color: #333;
+    cursor: pointer;
+}
+
+/* Style the dropdown when hovered */
+.custom-dropdown:hover {
+    border-color: #2E8B57; /* Darker green */
+  }
+  
+  /* Style the dropdown options */
+  .custom-dropdown option {
+    background: white;
+    color: black;
+    font-size: 16px;
+  }

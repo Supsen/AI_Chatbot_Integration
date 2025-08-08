@@ -1,0 +1,39 @@
+Appendix
+Title
+File Name
+A
+Route Configuration for Authentication
+routes/auth.js
+B
+Password Reset Function
+controllers/authController.js
+C
+Request Password Reset Function
+controllers/authController.js
+D
+User Registration Function
+controllers/authController.js
+E
+User Login Function
+controllers/authController.js
+F
+Get User Preferences Function
+controllers/authController.js
+G
+Logout Function and Cookie Clearing
+controllers/authController.js
+H
+Password Reset Request Route (with email sending)
+(from your custom backend route)
+I
+Frontend JS: Forgot Password Form Handler
+public/js/forgotPassword.js (or HTML inline script)
+J
+Backend: Express Server and OpenAI Integration
+server.js or index.js
+K
+Portfolio Injection and Custom Prompt Building
+server.js (within /chat endpoint)
+L
+Assistant Function Call Handling Logic
+server.js (within /chat endpoint)

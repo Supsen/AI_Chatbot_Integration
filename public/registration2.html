@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/register_style.css">
+  <!-- Link for tailwind css -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" href="icons/AVA5.png" type="image/png">
+  <title>Login & Register</title>
+  <script src="js/lottie.min.js"></script> <!--successful animation-->
+</head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('login')">Sign In</div>
+      <div class="tab" onclick="switchTab('register')">Sign Up</div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="form-container active" id="login">
+      <div class="form-header">
+        <h2>Welcome back</h2>
+        <p>Please enter your details to sign in</p>
+      </div>
+
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="loginEmail" class="login-active" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="loginPassword" class="login-active" placeholder="••••••••" required>
+        </div>
+
+        <label for="error" id="login-error-message" class="display-error"></label> <!-- Display Errors -->
+
+        <div class="remember-forgot">
+          <!-- <div class="checkbox-container">
+            <input type="checkbox" id="remember">
+            <label for="remember">Remember me</label>
+          </div> -->
+          <a href="forgot_password.html" class="forgot-link" id="password-reset">Forgot password?</a>
+        </div>
+        <button type="submit">Sign In</button>
+        <div class="divider">or continue with</div>
+        <!-- <div class="social-buttons">
+          <button class="social-button">G</button>
+          <button class="social-button">f</button>
+          <button class="social-button">in</button>
+        </div> -->
+      </form>
+
+    </div>
+
+    <!-- Register Form -->
+    <div class="form-container" id="register">
+      <div class="form-header">
+        <h2>Create an account</h2>
+        <p>Please fill in the information below</p>
+      </div>
+      <form id="registerForm">
+        <div class="input-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" class="name-active" placeholder="Enter your name" required>
+        </div>
+        <div class="input-group">
+          <label for="register-email">Email</label>
+          <input type="email" id="email" class="email-active" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+          <label for="register-password">Password</label>
+          <input type="password" id="password" class="password-active" placeholder="Create a password" required>
+        </div>
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirmPassword" class="password-active" placeholder="Confirm your password">
+        </div>
+        <!-- <div class="checkbox-container" style="margin-bottom: 20px;">
+          <input type="checkbox" id="terms">
+          <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
+        </div> -->
+
+        <label id="regis-error-message" for="error" class="display-error"></label> <!-- Display Errors -->
+        
+        <button type="submit">Create Account</button>
+        <!-- <div class="divider">or sign up with</div>
+        <div class="social-buttons">
+          <button class="social-button">G</button>
+          <button class="social-button">f</button>
+          <button class="social-button">in</button>
+        </div> -->
+      </form>
+    </div>
+
+    <p class="bottom-text" id="bottom-text">
+      Don't have an account? <a href="#" onclick="switchTab('register')">Sign up</a>
+    </p>
+  </div>
+  <div id="success-animation" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; height: 300px; z-index: 9999;"></div>
+  <script src="js/regis_script.js"></script>
+</body>
+</html>
